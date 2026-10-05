@@ -1,5 +1,5 @@
 # Lab 4: Concept Review
-
+(WARNING:I can get an answer but use the wrong methods. So I'm sorry if I sound stupid in my writing, It wakes sense in my brain but my brain is using a completely different method)
 This lab reviews the foundational concepts of algorithms and data structures that we have covered in the first half of the course. 
 
 **Instructions:** To complete this lab, you may work in groups, but you must write your solutions yourself. Choose two of the topics below that you need to review and complete the corresponding problems. Where relevant, you are given the answer and must provide the justification as your solution. Once you have completed the lab, push your changes to your forked repository.
@@ -9,30 +9,30 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 ## Asymptotic Analysis
 
 1. Use the rules from lecture 07 to prove that $T(n) = 5 \log n + 7n$ is $\mathcal{O}(n)$.
-
+(I know why in my own method, Might sound like an idot for how I do it though) So basicall you have the 5logn and the 7n. We just kinda drop the 5logn and have the 7n but we just drop the 7 and have t(n) = O(n)
 2. True/False/Possibly: $T(n)$ is $\mathcal{O}(n^2)$?
 
 **Answer**: Yes
 
-**Justification**:
+**Justification**:algorithm uses quadratic running time and worst case of running is T(n) (I know this from the slides.)
 
 3. True/False/Possibly: $T(n)$ is $\Omega(n \log n)$?
 
 **Answer**: No
 
-**Justification**:
+**Justification**: again in my mind it doesn't work because of the nlogn
 
 4. For any algorithm, we can give a trivial lower bound. What is that lower bound?
 
 **Answer**: $\Omega(1)$
 
-**Justification**:
+**Justification**:because there is always a bound at the bottom that is a possibility. Like you can just hit the bottom and work your way up from there.
 
 5. Is there a corresponding trivial upper bound? Why or why not?
 
 **Answer**: No
 
-**Justification**:
+**Justification**: We have no idea how high the upper bound could be. Unlit the lower bound we were able to go down as low as possible, but for this we can't just go as high as possible.
 
 
 
@@ -50,7 +50,7 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
  **Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
 
-**Justification**: (Dumb answer) the number just grows and grows and grows by an extreme amount that the amount of time is going up.
+**Justification**: (Dumb answer) the number just grows and grows and grows by an extreme amount that the amount of time is going up.What matches this pattern with the time increase is n^3
 
  2. Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap? 
 
