@@ -4,7 +4,7 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 **Instructions:** To complete this lab, you may work in groups, but you must write your solutions yourself. Choose two of the topics below that you need to review and complete the corresponding problems. Where relevant, you are given the answer and must provide the justification as your solution. Once you have completed the lab, push your changes to your forked repository.
 
-**Topics:** asymptotic analysis, data structures, empirical comparison of algorithms, pseudocode, greedy algorithms. 
+**Topics:** asymptotic analysis, and empirical comparison of algorithms
 
 ## Asymptotic Analysis
 
@@ -35,31 +35,7 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 **Justification**:
 
 
-## Data Structures
 
-1. You are programming a robot to navigate a maze. As the robot moves forward, it records each intersection it passes. When it hits a dead end, it needs to retreat to the most recently visited intersection to try a different path.
-
-**Answer**: Stack
-
-**Justification**:
-
-2. A server receives a massive influx of data packets from a streaming video application. To prevent the video from skipping or playing out of order on the user's end, the server must process and forward these packets in the exact sequence they were received.
-
-**Answer**: Queue
-
-**Justification**:
-
-3. An atmospheric monitoring system reads temperature data from 10,000 sequentially numbered sensors (IDs 0 through 9999). Throughout the day, the system needs to constantly update and read the current temperature of randomly selected sensors based on their ID number to build localized weather maps.
-
-**Answer**: Array
-
-**Justification**:
-
-4. You are building a lightweight syntax checker for a code editor. Its sole job is to scan a document and ensure that every opened parenthesis `(`, bracket `[`, and brace `{` is matched with its corresponding closing character in the correct nested order.
-
-**Answer**: Stack
-
-**Justification**:
 
 ## Empirical Comparison of Algorithms
 
@@ -74,11 +50,11 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
  **Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
 
-**Justification**:
+**Justification**: (Dumb answer) the number just grows and grows and grows by an extreme amount that the amount of time is going up.
 
  2. Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap? 
 
-**Answer**:
+**Answer**: This could be due to something stupid like how many things are opened in the background and computer type.Big O can take into account that type of thing. I know this is most likely a stupid answer but I remember us talking about it
 
  3. Scenario: To measure the running time of algorithms for an empirical comparison, a developer writes the following benchmarking script:
 
@@ -95,49 +71,4 @@ print("Time:", end - start)
 
 They run this script exactly once for each algorithm on their laptop while streaming a movie in the background. Identify at least three distinct methodological flaws in this benchmarking setup that make the results unreliable.
 
-**Answer**:
-
-## Pseudocode
-
-1. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
-
-```
-count = 0
-for i = 1 to N do
-    for j = i to N do
-        do_work()
-```
-
-Write a closed-form expression for the number of times `do_work()` is called in terms of $N$.
-
-2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
-
-```
-i = N
-while i > 0:
-    for j = 1 to i:
-        do_work()
-    i = floor(i / 2)
-```
-
-If $N=16$, how many times is `do_work()` called?
-
-**Answer**: 31
-
-**Justification**:
-
-## Greedy Algorithms
-
-You are organizing a film festival but only have access to a single screen. You are given a list of $n$ films, each with a specific `start_time` and `end_time`. You want to screen the maximum number of films possible.
-
-Consider the following three greedy strategies:
-
-- **Shortest First**: Always pick the film with the shortest duration (that doesn't conflict with already chosen films).
-- **Earliest Start**: Always pick the film that starts the earliest (that doesn't conflict).
-- **Earliest Finish**: Always pick the film that finishes the earliest (that doesn't conflict).
-
-Which of these three strategies guarantees an optimal solution (maximum number of films)? For the two strategies that fail, provide a counter-example (a small set of film times) where the greedy choice results in a sub-optimal schedule.
-
-**Answer**: The earliest finish strategy guarantees an optimal solution.
-
-**Justification**:
+**Answer**: The movie. The large array the computer is trying to compreheand. And Start and end both being time.time() when there are so many different times.
